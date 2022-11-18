@@ -1,28 +1,24 @@
 import React from "react";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 const Header = () => {
   return (
     <>
-     <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-  <a className="navbar-brand" href=".">Temple.Com</a>
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
-
-  <div className="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul className="navbar-nav mr-auto">
-      <li className="nav-item active">
-        <a className="nav-link" href="."> Home</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href=".">About</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href=".">Contact</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+     <Navbar  expand="lg" className="navbar navbar-expand-lg navbar-dark bg-dark text-primary">
+      <Container >
+        <Navbar.Brand href="#home" className="text-info">Temple.com</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">About</Nav.Link>
+            <Nav.Link href="#link">Contact</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
     </>
   );
 };
